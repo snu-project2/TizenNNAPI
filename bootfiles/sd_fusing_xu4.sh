@@ -198,7 +198,7 @@ function mkpart_3 () {
 	local -r SIZE_MB=$((SIZE >> 10))
 
 	local -r BOOT_SZ=64
-	local -r ROOTFS_SZ=5120
+	local -r ROOTFS_SZ=3072
 	local -r DATA_SZ=512
 	local -r MODULE_SZ=20
 
