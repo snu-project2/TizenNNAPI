@@ -24,5 +24,12 @@ int ANeuralNetworksModel_identifyInputsAndOutputs(ANeuralNetworksModel *model, u
 	}
 	return ANEURALNETWORKS_NO_ERROR;
 }
-int ANeuralNetworksModel_addOperand(ANeuralNetworksModel *model, const ANeuralNetworksOperandType *type)
-int ANeuralNetworksModel_addOperation(ANeuralNetworksModel *model, ANeuralNetworksOperationType type, uint32_t inputCount, const uint32_t *inputs, uint32_t outputCount, const uint32_t *outputs)
+int ANeuralNetworksModel_addOperand(ANeuralNetworksModel *model, const ANeuralNetworksOperandType *type){
+	Operand operand = new Operand();
+	operand.type = type;
+	model->Operands.push_back(operand);
+	return ANEURALNETWORKS_NO_ERROR;
+}
+int ANeuralNetworksModel_addOperation(ANeuralNetworksModel *model, ANeuralNetworksOperationType type, uint32_t inputCount, const uint32_t *inputs, uint32_t outputCount, const uint32_t *outputs){
+	
+}
