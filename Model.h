@@ -1,6 +1,17 @@
 #include "Memory.h"
 #include <vector>
 
+class Operand{
+	ANeuralNetworksOperandType type;
+	vector<int> inputs; //input operand indexes at model.operands
+	vector<int> outputs;
+};
+
+class Operation{
+	ANeuralNetworksOperationType type;
+	vector<void*> location;
+};
+
 class Model{
 public:
 	Model():isFinished(false){}
